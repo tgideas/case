@@ -1,0 +1,215 @@
+.resizer {
+    background: -webkit-gradient(linear, left top, left bottom, from(#505050), to(#383838));
+    background: -webkit-linear-gradient(#505050, #383838);
+    background: linear-gradient(#505050, #383838);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    -webkit-box-shadow: inset 0 1px 0 #6e6e6e, 0 2px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 1px 0 #6e6e6e, 0 2px 2px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 250;
+    left: -10px;
+    right: -10px;
+    top: 50%;
+    height: 17px;
+    margin-top: 1px;
+    cursor: row-resize
+}
+.resizer span {
+    display: block;
+    height: 100%;
+    background: url(../img/editor/handle-vert.png) center center no-repeat
+}
+body {
+    min-width: 1000px !important
+}
+.box-html {
+    left: 0;
+    right: 66.6666%
+}
+.box-css {
+    left: 33.3333%;
+    right: 33.3333%
+}
+.box-js {
+    left: 66.6666%;
+    right: 0
+}
+.top-boxes.state-htmlOn-cssOff-jsOn .box-html {
+    right: 52%
+}
+.top-boxes.state-htmlOn-cssOff-jsOn .box-css {
+    left: 48%;
+    right: 49%
+}
+.top-boxes.state-htmlOn-cssOff-jsOn .box-css .settings-nub, .top-boxes.state-htmlOn-cssOff-jsOn .box-css h2, .top-boxes.state-htmlOn-cssOff-jsOn .box-css #run, .top-boxes.state-htmlOn-cssOff-jsOn .box-css .view-compiled-button {
+    display: none
+}
+.top-boxes.state-htmlOn-cssOff-jsOn .box-css .CodeMirror {
+    display: none
+}
+.top-boxes.state-htmlOn-cssOff-jsOn .box-css .expander {
+    right: auto;
+    left: 10px
+}
+.top-boxes.state-htmlOn-cssOff-jsOn .box-css .expander-button-collapse {
+    display: none
+}
+.top-boxes.state-htmlOn-cssOff-jsOn .box-js {
+    left: 51%;
+    right: 0
+}
+.top-boxes.state-htmlOff-cssOn-jsOn .box-html {
+    right: 97%
+}
+.top-boxes.state-htmlOff-cssOn-jsOn .box-html .settings-nub, .top-boxes.state-htmlOff-cssOn-jsOn .box-html h2, .top-boxes.state-htmlOff-cssOn-jsOn .box-html #run, .top-boxes.state-htmlOff-cssOn-jsOn .box-html .view-compiled-button {
+    display: none
+}
+.top-boxes.state-htmlOff-cssOn-jsOn .box-html .CodeMirror {
+    display: none
+}
+.top-boxes.state-htmlOff-cssOn-jsOn .box-html .expander {
+    right: auto;
+    left: 10px
+}
+.top-boxes.state-htmlOff-cssOn-jsOn .box-html .expander-button-collapse {
+    display: none
+}
+.top-boxes.state-htmlOff-cssOn-jsOn .box-css {
+    left: 3%;
+    right: 50%
+}
+.top-boxes.state-htmlOff-cssOn-jsOn .box-js {
+    left: 50%
+}
+.top-boxes.state-htmlOn-cssOn-jsOff .box-html {
+    right: 50%
+}
+.top-boxes.state-htmlOn-cssOn-jsOff .box-css {
+    left: 50%;
+    right: 3%
+}
+.top-boxes.state-htmlOn-cssOn-jsOff .box-js {
+    left: 97%
+}
+.top-boxes.state-htmlOn-cssOn-jsOff .box-js .settings-nub, .top-boxes.state-htmlOn-cssOn-jsOff .box-js h2, .top-boxes.state-htmlOn-cssOn-jsOff .box-js #run, .top-boxes.state-htmlOn-cssOn-jsOff .box-js .view-compiled-button {
+    display: none
+}
+.top-boxes.state-htmlOn-cssOn-jsOff .box-js .CodeMirror {
+    display: none
+}
+.top-boxes.state-htmlOn-cssOn-jsOff .box-js .expander {
+    right: auto;
+    left: 10px
+}
+.top-boxes.state-htmlOn-cssOn-jsOff .box-js .expander-button-collapse {
+    display: none
+}
+.top-boxes.state-htmlOn-cssOff-jsOff .box-html {
+    right: 6%
+}
+.top-boxes.state-htmlOn-cssOff-jsOff .box-css {
+    left: 94%;
+    right: 3%
+}
+.top-boxes.state-htmlOn-cssOff-jsOff .box-css .settings-nub, .top-boxes.state-htmlOn-cssOff-jsOff .box-css h2, .top-boxes.state-htmlOn-cssOff-jsOff .box-css #run, .top-boxes.state-htmlOn-cssOff-jsOff .box-css .view-compiled-button {
+    display: none
+}
+.top-boxes.state-htmlOn-cssOff-jsOff .box-css .CodeMirror {
+    display: none
+}
+.top-boxes.state-htmlOn-cssOff-jsOff .box-css .expander {
+    right: auto;
+    left: 10px
+}
+.top-boxes.state-htmlOn-cssOff-jsOff .box-css .expander-button-collapse {
+    display: none
+}
+.top-boxes.state-htmlOn-cssOff-jsOff .box-js {
+    left: 97%
+}
+.top-boxes.state-htmlOn-cssOff-jsOff .box-js .settings-nub, .top-boxes.state-htmlOn-cssOff-jsOff .box-js h2, .top-boxes.state-htmlOn-cssOff-jsOff .box-js #run, .top-boxes.state-htmlOn-cssOff-jsOff .box-js .view-compiled-button {
+    display: none
+}
+.top-boxes.state-htmlOn-cssOff-jsOff .box-js .CodeMirror {
+    display: none
+}
+.top-boxes.state-htmlOn-cssOff-jsOff .box-js .expander {
+    right: auto;
+    left: 10px
+}
+.top-boxes.state-htmlOn-cssOff-jsOff .box-js .expander-button-collapse {
+    display: none
+}
+.top-boxes.state-htmlOff-cssOff-jsOn .box-html {
+    right: 97%
+}
+.top-boxes.state-htmlOff-cssOff-jsOn .box-html .settings-nub, .top-boxes.state-htmlOff-cssOff-jsOn .box-html h2, .top-boxes.state-htmlOff-cssOff-jsOn .box-html #run, .top-boxes.state-htmlOff-cssOff-jsOn .box-html .view-compiled-button {
+    display: none
+}
+.top-boxes.state-htmlOff-cssOff-jsOn .box-html .CodeMirror {
+    display: none
+}
+.top-boxes.state-htmlOff-cssOff-jsOn .box-html .expander {
+    right: auto;
+    left: 10px
+}
+.top-boxes.state-htmlOff-cssOff-jsOn .box-html .expander-button-collapse {
+    display: none
+}
+.top-boxes.state-htmlOff-cssOff-jsOn .box-css {
+    left: 3%;
+    right: 94%
+}
+.top-boxes.state-htmlOff-cssOff-jsOn .box-css .settings-nub, .top-boxes.state-htmlOff-cssOff-jsOn .box-css h2, .top-boxes.state-htmlOff-cssOff-jsOn .box-css #run, .top-boxes.state-htmlOff-cssOff-jsOn .box-css .view-compiled-button {
+    display: none
+}
+.top-boxes.state-htmlOff-cssOff-jsOn .box-css .CodeMirror {
+    display: none
+}
+.top-boxes.state-htmlOff-cssOff-jsOn .box-css .expander {
+    right: auto;
+    left: 10px
+}
+.top-boxes.state-htmlOff-cssOff-jsOn .box-css .expander-button-collapse {
+    display: none
+}
+.top-boxes.state-htmlOff-cssOff-jsOn .box-js {
+    left: 6%
+}
+.top-boxes.state-htmlOff-cssOn-jsOff .box-html {
+    right: 97%
+}
+.top-boxes.state-htmlOff-cssOn-jsOff .box-html .settings-nub, .top-boxes.state-htmlOff-cssOn-jsOff .box-html h2, .top-boxes.state-htmlOff-cssOn-jsOff .box-html #run, .top-boxes.state-htmlOff-cssOn-jsOff .box-html .view-compiled-button {
+    display: none
+}
+.top-boxes.state-htmlOff-cssOn-jsOff .box-html .CodeMirror {
+    display: none
+}
+.top-boxes.state-htmlOff-cssOn-jsOff .box-html .expander {
+    right: auto;
+    left: 10px
+}
+.top-boxes.state-htmlOff-cssOn-jsOff .box-html .expander-button-collapse {
+    display: none
+}
+.top-boxes.state-htmlOff-cssOn-jsOff .box-css {
+    left: 3%;
+    right: 3%
+}
+.top-boxes.state-htmlOff-cssOn-jsOff .box-js {
+    left: 97%
+}
+.top-boxes.state-htmlOff-cssOn-jsOff .box-js .settings-nub, .top-boxes.state-htmlOff-cssOn-jsOff .box-js h2, .top-boxes.state-htmlOff-cssOn-jsOff .box-js #run, .top-boxes.state-htmlOff-cssOn-jsOff .box-js .view-compiled-button {
+    display: none
+}
+.top-boxes.state-htmlOff-cssOn-jsOff .box-js .CodeMirror {
+    display: none
+}
+.top-boxes.state-htmlOff-cssOn-jsOff .box-js .expander {
+    right: auto;
+    left: 10px
+}
+.top-boxes.state-htmlOff-cssOn-jsOff .box-js .expander-button-collapse {
+    display: none
+}
