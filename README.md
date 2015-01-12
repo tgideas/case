@@ -1,4 +1,4 @@
-css3
+Cool Website Case Collection
 ====
 
-css3 cases
+A collection for cool websites, specially for HTML5 mobile websites.
