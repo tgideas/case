@@ -1,0 +1,120 @@
+/**
+ * 2014话费时光机
+ * @author:bennyhe;
+ * @date:2014-12-11;
+*/
+.page-1{
+	.act-bg2{width:100%;height:100%;position:absolute;left:0;bottom:0;background:url(../img/index_bg2.png) no-repeat;background-size:100% 100%;z-index:-1;}
+}
+.page-2{
+	/*模块*/
+	.act-bg1{width:100%;height:100%;position:absolute;left:0;bottom:0;background:url(../img/index_bg.png) no-repeat;background-size:100% 100%;}
+
+	/*标题*/
+	.act-title{
+		position:absolute;top:0.45rem;left:50%;margin-left:-1.23rem;width:2.46rem;
+
+		h1{display:none;}
+		.act-ico{display:block;}
+	}
+
+	/*地球*/
+	.act-earth{
+		width:3.2rem;height:2.07rem;position:absolute;bottom:0;background:url(../img/earth.png) no-repeat;background-size:100%;left:50%;margin-left:-1.6rem;
+
+		.ico-light{position:absolute;left:0.05rem;bottom:0.92rem;}
+	}
+	/*星球*/
+	.act-ball{position:absolute;left:0;top:0;width:100%;height:100%;}
+	.ico-ball1{position:absolute;left:1.5rem;bottom:1rem;}
+	.ico-ball2{position:absolute;left:1.5rem;bottom:0.5rem;}
+
+	/*火箭*/
+	.act-rocket{
+		width:1.4rem;height:1.61rem;background-size:1.4rem;position:absolute;bottom:0.85rem;left:50%;margin-left:-0.7rem;
+
+		.avatar-area{
+			width:0.42rem;height:0.28rem;margin:0.65rem auto 0.03rem;overflow:hidden;position:relative;
+		}
+		.avatar{
+			height:0.4rem;border-radius:0.4rem;border:0.02rem solid #1e1e1e;display:block;background:#1e1e1e;
+
+			img{width:100%;height:100%;border-radius:0.4rem;vertical-align:top}
+		}
+		.ico-rocket{position:absolute;left:0;top:0;}
+		.ico-avatar-shadow{position:absolute;left:0.24rem;top:0.48rem;}
+		.ico-rocket-shadow{position:absolute;left:50%;margin-left:-0.33rem;bottom:-0.11rem;}
+		.ico-rocket-fire{position:absolute;left:50%;margin-left:-0.5rem;bottom:-1.2rem;opacity:0;}
+
+		.name{font-size:0.12rem;color:#838486;text-align:center;line-height:0.16rem;width:0.76rem;height:0.16rem;margin:0 auto;overflow:hidden;white-space: nowrap;text-overflow:ellipsis;position:relative;}
+	}
+
+	.ico-tips-click{position:absolute;bottom:2.5rem;left:50%;margin-left:-0.575rem;}
+}
+
+/*星球选择页面 */
+.page-select{
+	.act-star{
+		position:absolute;
+
+		.act-ico{z-index:2;position:relative;}
+
+		&:after{content:"";position:absolute;box-shadow:0 0 0.05rem #14495c;border-radius:100rem;z-index:1;}
+	}
+
+	.act-star1{
+		width:1.1rem;height:1.17rem;bottom:0.87rem;right:0.4rem;
+		&:after{width:0.98rem;height:0.98rem;top:0.13rem;left:0.06rem;}
+	}
+
+	.act-star2{
+		width:.88rem;height:.93rem;bottom:0.74rem;left:0;
+		&:after{width:0.78rem;height:0.78rem;top:0.1rem;left:0.05rem}
+	}
+
+	.act-star3{
+		width:.93rem;height:.92rem;top:1.35rem;left:0;/*opacity:.7*/
+		&:after{width:0.52rem;height:0.52rem;top:0.14rem;left:-0.08rem;}
+	}
+
+	.act-star4{
+		width:.61rem;height:.81rem;top:0.43rem;left:0.4rem;/*opacity:.5*/
+		&:after{width:0.46rem;height:0.46rem;top:0.15rem;left:0.17rem;}
+	}
+
+	.act-star5{
+		width:.79rem;height:.78rem;top:0.77rem;left:1.55rem;/*opacity:.8*/
+		&:after{width:0.6rem;height:0.6rem;top:0.16rem;left:0.16rem}
+	}
+
+	.act-star6{
+		width:.45rem;height:.69rem;top:0.62rem;right:0;/*opacity:.5*/
+		&:after{width:0.4rem;height:0.4rem;top:0.15rem;right:-0.1rem}
+	}
+
+	.ico-star-tips{position: absolute;left:50%;top:1.9rem;margin-left:-0.6rem;opacity:0}
+	.ico-rocket-s2{position: absolute;bottom:-0.89rem;left:50%;margin-left:-0.16rem;}
+
+	.ico-tips-arrow{position:absolute;bottom:32%;left:40%;opacity:0}
+}
+
+/*层级控制*/
+.page-2{
+	.act-bg1,
+	.act-bg2{z-index:-1;}
+	.act-ball{z-index:2;}
+	.act-title,
+	.act-earth{z-index:3;}
+	.act-rocket{z-index:4;}
+	.ico-tips-click{z-index:5;}
+
+
+	.act-rocket .name{z-index:2;}
+	.act-rocket .ico-rocket{z-index:1;}
+	.act-rocket .avatar-area{z-index:2;}
+	.act-rocket .ico-avatar-shadow{z-index:3;}
+	.act-rocket .ico-rocket-fire{z-index:-1;}
+}
+
+
+.page-select .slide-content{z-index:4;}

@@ -1,0 +1,57 @@
+@charset "utf-8";
+/**
+ * H5活动全局公用reset
+ * author:harrischen;
+ * date:2013-09-13 22:35:00;
+ * update:2014-08-28 by bennyhe;
+ */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, select, th, td { margin:0px; padding:0px; }
+/*全站默认灰色字体*/
+body { background-color:#efeff4;font-size:14px;line-height:1.5;font-family:\5FAE\8F6F\96C5\9ED1; color:#808080; -webkit-text-size-adjust:100%!important;}
+/*去除表单元素的默认效果*/
+button, input, textarea, select{
+	font-size:100%; font-family:inherit; color:inherit;
+	-webkit-appearance:none;
+}
+/*去除IE里select的默认外观*/
+select::-ms-expand { display:none; }
+select:focus,
+select:active {  background-color:transparent; }
+input[type=text]::-ms-clear,
+input[type=tel]::-ms-clear,
+input[type=number]::-ms-clear{
+	display:none;
+}
+/*禁用常用标签在选中的时候出现半透明效果或者黄色边框*/
+body, a, img, label, button, input, textarea, select{
+	outline:none;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+}
+input::-webkit-input-placeholder { color:#999999; /* 设置input的提示文字默认为灰色 */}
+h1, h2, h3, h4, h5, h6, b { font-weight:normal; }
+ul, ol { list-style:none; }
+table { border-collapse:collapse; border-spacing:0px; }
+img { border:none; }
+a { color:#0079ff; text-decoration:none;  }
+a, img {
+	-webkit-touch-callout:none; /* 禁止长按链接与图片弹出菜单 */
+	
+}
+/*禁用长按链接弹出效果*/
+html, body {
+	min-height:100%;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-touch-callout:none; /* 禁止长按链接与图片弹出菜单 */
+	
+	-webkit-overflow-scrolling:touch; /* 滚动时更顺畅 */
+}
+/*HTML5常用标签*/
+/*article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { display:block; margin:0px; padding:0px; }*/
+header, nav, section, footer { display:block; }
+
+fieldset{border:none;}
+
+em{font-style:normal;}
+strong{font-weight:700;}

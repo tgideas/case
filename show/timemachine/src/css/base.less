@@ -1,0 +1,45 @@
+@import (less) "lib_reset.less";
+@import (less) "../../global/m/css/floating.mod.css";
+
+html{font-size:100px}
+body{background:#09232f;font-size:0.14rem;color:#189ac9;}
+button{background:none;border:none;font-size:0.14rem;}
+body{ width: 100%; height: 100%; -webkit-user-select: none; color: #000; }
+
+
+.animation {
+	display: none;
+}
+
+/*loading*/
+.act-loading{
+	background:#09232f;color:#FFF;
+	.loading-bar{width:2.06rem;height:0.62rem;margin:0 auto;position:relative;padding-top:0.32rem;}
+	.ico-loading{position:absolute;left:0;top:0;margin-left:-0.46rem;}
+	.ico-loading-tips{position:absolute;bottom:0;left:50%;margin-left:-0.34rem;}
+	.process,
+	.process i{display:block;height:0.03rem;border-radius:0.02rem;}
+	.process{background:#133b4e;}
+	.process i{background:#78bfbf;width:0;}
+	.loading-bar .ico-loading,
+	.process i{
+		-webkit-transition: all 0.3s linear;
+		-ms-transition: all 0.3s linear;
+		transition: all 0.3s linear;
+	}
+}
+
+
+.ico-loading,
+.ico-loading-tips{background:url(../img/loading_sprite.png) no-repeat;background-size:1.47rem;}
+.ico-loading{width:0.46rem;height:0.24rem;}
+.ico-loading-tips{width:0.68rem;height:0.12rem;background-position:right -0.54rem;}
+
+/*横屏提示*/
+.act-screen-tips{
+	background:#09232f;color:#FFF;visibility:hidden;z-index:200;
+}
+@media (orientation: landscape) {
+	.act-screen-tips{visibility:visible;}
+}
+

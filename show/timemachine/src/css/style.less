@@ -1,0 +1,41 @@
+@import (less) "base.less";
+@import (less) "lib_common.less";
+@import (less) "lib_icon.less";
+@import (less) "lib_button.less";
+@import (less) "mod_animation.less";
+@import (less) "mod_default_page.less";
+@import (less) "mod_inner_page.less";
+
+/******************************适配iphone4/4s****************************/
+@media screen and (max-height: 503px) {
+	.act-inner-page{
+		.inner-hd{margin-top:0.1rem}
+		.inner-hd-title{margin-bottom:0}
+		.act-inner-detail{bottom:-0.4rem;}
+	}
+
+	.page-1-1 .act-inner-detail{bottom:-0.7rem}
+
+	.page-select{
+		.ico-star-tips{top:1.6rem}
+		.ico-tips-arrow{bottom:1.5rem;}
+	}
+
+
+	.act-inner-page2 .ani-layer-leaf{bottom:-0.4rem;}
+	.act-inner-page6 .inner-location{margin-top:.1rem}
+	.act-inner-page6 .ico-mountain-human{bottom:0.4rem}
+	.act-inner-page7 .inner-share{width:1.7rem;}
+	.act-inner-page7 .inner-share img{margin-bottom:0.1rem}
+	
+	.page-2{
+		.act-title{top:0.25rem}
+		.ico-tips-click{bottom:2.1rem}
+		.ico-ball1{bottom:0.2rem;}
+		.ico-ball2{bottom:0;}
+		.act-rocket{bottom:0.35rem}
+		.act-earth{bottom:-0.5rem}
+	}
+
+}
+

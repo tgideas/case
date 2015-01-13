@@ -1,0 +1,329 @@
+@import (less) "../../global/animate/animate.base.css";
+@import (less) "../../global/animate/animate.fadeIn.css";
+@import (less) "../../global/animate/animate.fadeOut.css";
+@import (less) "../../global/animate/animate.bounceIn.css";
+/**********************************首页动画*******************************/
+/*loading火箭*/
+.ico-loading{
+	-webkit-animation: aniLoading .5s linear infinite both;
+}
+@-webkit-keyframes aniLoading{
+	from{opacity:.5}
+	to	{opacity:1}
+}
+
+/*标题*/
+.ico-title1{
+	-webkit-animation: aniTitle 10s linear infinite both;
+}
+.ico-title-line{
+	-webkit-animation: aniTitle 10s 5s linear infinite both;
+}
+.ico-title2{
+	-webkit-animation: aniTitle 10s 5s linear infinite both;
+}
+@-webkit-keyframes aniTitle{
+	0%,100%{-webkit-transform: translate(0,0)}
+	50%{-webkit-transform: translate(0.05rem,0.05rem) }
+}
+
+/*灯塔光芒*/
+.ico-light{
+	-webkit-animation: aniLight 5s linear infinite both;
+	-webkit-transform-origin:48% 53%;
+}
+
+@-webkit-keyframes aniLight{
+	from{-webkit-transform: rotate(0deg); }
+	to	{-webkit-transform: rotate(360deg); }
+}
+/*卫星*/
+.ico-ball1{
+	-webkit-animation: aniBall1 10s 5s linear infinite both;
+	-webkit-transform-origin:-2.3rem -0.1rem;
+}
+@-webkit-keyframes aniBall1{
+	from{ -webkit-transform: rotate(0deg) translateX(-2.2rem) rotate(0deg); }
+	to	{ -webkit-transform: rotate(360deg) translateX(-2.2rem) rotate(-360deg); }
+}
+
+.ico-ball2{
+	-webkit-animation: aniBall2 12s linear infinite both;
+	-webkit-transform-origin:-2.5rem -0.1rem;
+}
+
+@-webkit-keyframes aniBall2{
+	from{ -webkit-transform: rotate(0deg) translateX(-2.2rem) rotate(0deg); }
+	to	{ -webkit-transform: rotate(360deg) translateX(-2.2rem) rotate(-360deg); }
+}
+/*星球光环*/
+.page-select{
+	.act-star1:after{
+		-webkit-animation: fnStarShadow 1s linear infinite both;
+	}
+	.act-star2:after{
+		-webkit-animation: fnStarShadow 1s .2s linear infinite both;
+	}
+	.act-star3:after{
+		-webkit-animation: fnStarShadow 1s .4s linear infinite both;
+	}
+	.act-star4:after{
+		-webkit-animation: fnStarShadow 1s .6s linear infinite both;
+	}
+	.act-star5:after{
+		-webkit-animation: fnStarShadow 1s .8s linear infinite both;
+	}
+	.act-star6:after{
+		-webkit-animation: fnStarShadow 1s 1s linear infinite both;
+	}
+}
+@-webkit-keyframes fnStarShadow{
+	0%,100%{box-shadow:0 0 0.05rem #14495c;}
+	50%{ box-shadow:0 0 0.1rem 0.05rem #14495c; }
+}
+
+/*首页开始动画*/
+.slide-layout-2 .page-2.ani-index-start{
+	.act-title{
+		-webkit-animation: aniTitleGo 0.5s linear both;
+	}
+	.act-rocket{
+		-webkit-animation: aniRocketGo 1.5s ease-in both;
+	}
+	.ico-rocket-shadow{
+		-webkit-animation: fadeOut 0.3s linear both;
+	}
+	.ico-rocket-fire{
+		-webkit-animation: aniFire 3s linear both;
+	}
+	.act-earth{
+		-webkit-animation: aniEarthGo 1s linear both;
+	}
+	.ico-tips-click{
+		-webkit-animation: fadeOut 0.1s linear both;
+	}
+}
+@-webkit-keyframes aniRocketGo{
+	0%{-webkit-transform: translateY(0) scale(1)}
+	100%{-webkit-transform: translateY(-5.5rem) scale(0.1)}
+}
+@-webkit-keyframes aniFire{
+	0%{opacity:1;}
+	20%{opacity:1;background-image:url(../img/rocket_fire2.png);}
+	30%,100%{opacity:1;background-image:url(../img/rocket_fire3.png);}
+}
+@-webkit-keyframes aniTitleGo{
+	0%{opacity:1;-webkit-transform:translateY(0)}
+	100%{opacity:0;-webkit-transform:translateY(-0.1rem)}
+}
+@-webkit-keyframes aniEarthGo{
+	0%{opacity:1;-webkit-transform:translateY(0)}
+	100%{opacity:0;-webkit-transform:translateY(3rem)}
+}
+
+
+/*选择页面的初始动画*/
+.slide-layout-1 .page-1.ani-select-start{
+	.ico-rocket-s2{
+		-webkit-animation: aniRocketGo2 2s linear both;
+	}
+	.ico-star-tips{
+		-webkit-animation: fadeIn 0.6s 2s linear both;
+	}
+	.ico-tips-arrow{
+		-webkit-animation: fadeIn 0.6s 2.6s linear both;
+	}
+}
+@-webkit-keyframes aniRocketGo2{
+	0%{-webkit-transform: translateY(0)}
+	80%{opacity:1}
+	100%{opacity:0;-webkit-transform: translateY(-4rem)}
+}
+/**********************************子页面动画*******************************/
+@-webkit-keyframes aniRocketSmallGo{
+	0%{-webkit-transform:translateX(0)}
+	100%{-webkit-transform:translateX(3rem)}
+}
+
+
+@-webkit-keyframes aniArrowLeft{
+	0%,100%{opacity:0}
+	50%{opacity:1;-webkit-transform:translateX(-0.1rem)}
+}
+@-webkit-keyframes aniArrowRight{
+	0%,100%{opacity:0}
+	50%{opacity:1;-webkit-transform:translateX(0.1rem)}
+}
+.ico-arrow-l{
+	-webkit-animation: aniArrowLeft 2s linear both infinite;
+}
+.ico-arrow-r{
+	-webkit-animation: aniArrowRight 2s linear both infinite;
+}
+/***********第1页********/
+@-webkit-keyframes aniBearDream{
+	0%,100%{-webkit-transform:scale(0.8)}
+	50%{-webkit-transform:scale(1)}
+}
+.page-1-1 .ico-bear-dream{
+	-webkit-animation: aniBearDream 2s linear both infinite;
+}
+@-webkit-keyframes aniBearZ{
+	0%{opacity:0;-webkit-transform:translate(0,0) scale(1)}
+	20%,80%{opacity:1}
+	80%{-webkit-transform:translate(0.24rem,-0.16rem) scale(.5)}
+	100%{opacity:0;-webkit-transform:translate(0.3rem,-0.2rem) scale(0)}
+}
+.page-1-1 .ico-bear-z{
+	-webkit-animation: aniBearZ 4s linear both infinite;
+}
+.page-1-1 .ico-bear-z:nth-child(2){
+	-webkit-animation-delay:2s;
+}
+/***********第3页********/
+@-webkit-keyframes aniHuman{
+	0%,100%{-webkit-transform: translate(0,0) rotate(0)}
+	40%{-webkit-transform: translate(0.1rem,0.1rem) rotate(-2deg)}
+	80%{-webkit-transform: translate(-0.1rem,-0.1rem) rotate(2deg)}
+}
+.page-1-3 .ico-cloud-human{
+	-webkit-animation: aniHuman 15s linear both infinite;
+}
+/*流星*/
+@-webkit-keyframes aniMeteor1{
+	0%{opacity:0;-webkit-transform: translate(4.3rem,-1rem)}
+	20%,80%{opacity:.8}
+	100%{opacity:0;-webkit-transform: translate(-1rem,4.3rem)}
+}
+.ani-layer-meteor i:nth-child(1) {
+	-webkit-animation: aniMeteor1 1.4s ease-in-out both infinite;
+}
+@-webkit-keyframes aniMeteor2{
+	0%{opacity:0;-webkit-transform: translate(2.7rem,-1.7rem)}
+	20%,80%{opacity:.2}
+	100%{opacity:0;-webkit-transform: translate(-1.7rem,2.7rem)}
+}
+.ani-layer-meteor i:nth-child(2) {
+	-webkit-animation: aniMeteor2 1.4s 0.4s ease-in-out both infinite;
+}
+@-webkit-keyframes aniMeteor3{
+	0%{opacity:0;-webkit-transform: translate(6.5rem,-2rem)}
+	20%,80%{opacity:.6}
+	100%{opacity:0;-webkit-transform: translate(-2rem,6.5rem)}
+}
+.ani-layer-meteor i:nth-child(3) {
+	-webkit-animation: aniMeteor3 2.8s 1.4s ease-in-out both infinite;
+}
+/***********第4页********/
+@-webkit-keyframes aniBlister1{
+	0%{opacity:0;-webkit-transform:translate(0,0)}
+	25%{-webkit-transform: translate(-0.5rem,-1rem)}
+	50%{-webkit-transform: translate(0,-1.5rem)}
+	75%{-webkit-transform: translate(0.5rem,-2rem)}
+	100%{opacity:0;-webkit-transform: translate(0,-2.5rem)}
+	20%,80%{opacity:1}
+}
+.ani-layer-blister i:nth-child(1) {
+	-webkit-transform:scale(0.5);
+	-webkit-animation: aniBlister 12s linear both infinite;
+}
+@-webkit-keyframes aniBlister2{
+	0%{opacity:0;-webkit-transform:translate(0,0) scale(0.5)}
+	25%{-webkit-transform: translate(-0.5rem,-1rem)}
+	50%{-webkit-transform: translate(0,-1.5rem)}
+	75%{-webkit-transform: translate(0.5rem,-2rem)}
+	100%{opacity:0;-webkit-transform: translate(0,-2.5rem)}
+	20%,80%{opacity:0.8}
+}
+.ani-layer-blister i:nth-child(2) {
+	-webkit-animation: aniBlister2 10s linear both infinite;
+}
+@-webkit-keyframes aniBlister3{
+	0%{opacity:0;-webkit-transform:translate(0,0) scale(0.7)}
+	25%{-webkit-transform: translate(-0.5rem,-1rem)}
+	50%{-webkit-transform: translate(0,-1.5rem)}
+	75%{-webkit-transform: translate(0.5rem,-2rem)}
+	100%{opacity:0;-webkit-transform: translate(0,-2.5rem)}
+	20%,80%{opacity:0.4}
+}
+.ani-layer-blister i:nth-child(3) {
+	-webkit-animation: aniBlister3 16s 6s linear both infinite;
+}
+@-webkit-keyframes aniBlister4{
+	0%{opacity:0;-webkit-transform:translate(0,0) scale(1.1)}
+	25%{-webkit-transform: translate(-0.5rem,-1rem)}
+	50%{-webkit-transform: translate(0,-1.5rem)}
+	75%{-webkit-transform: translate(0.5rem,-2rem)}
+	100%{opacity:0;-webkit-transform: translate(0,-2.5rem)}
+	20%,80%{opacity:0.6}
+}
+.ani-layer-blister i:nth-child(4) {
+	-webkit-animation: aniBlister4 14s 1s linear both infinite;
+}
+@-webkit-keyframes aniBlister5{
+	0%{opacity:0;-webkit-transform:translate(0,0) scale(0.7)}
+	25%{-webkit-transform: translate(-0.5rem,-1rem)}
+	50%{-webkit-transform: translate(0,-1.5rem)}
+	75%{-webkit-transform: translate(0.5rem,-2rem)}
+	100%{opacity:0;-webkit-transform: translate(0,-2.5rem)}
+	20%,80%{opacity:0.2}
+}
+.ani-layer-blister i:nth-child(5) {
+	-webkit-animation: aniBlister5 12s 3s linear both infinite;
+}
+/***********第6页********/
+/*下雪*/
+@-webkit-keyframes aniSnow1{
+	0% {-webkit-transform: translate(187px,-75px) scale(0.2,0.2) }
+	100% {-webkit-transform: translate(312px,569px) }
+}
+.ani-layer-snow i:nth-child(1) { 
+	opacity: 0.8;
+	z-index: 1;
+	-webkit-animation: aniSnow1 10s linear 5s infinite;
+}
+@-webkit-keyframes aniSnow2{
+	0% {-webkit-transform: translate(115px,-83px) scale(0.6,0.6) }
+	100% {-webkit-transform: translate(97px,537px) }
+}
+.ani-layer-snow i:nth-child(2) { 
+	opacity: 0.4;
+	z-index: 1;
+	-webkit-animation: aniSnow2 10s linear 3s infinite;
+}
+@-webkit-keyframes aniSnow3{
+	0% {-webkit-transform: translate(124px,-13px) scale(0.6,0.6) }
+	100% {-webkit-transform: translate(230px,567px) }
+}
+.ani-layer-snow i:nth-child(3) { 
+	opacity: 0.6;
+	z-index: 0;
+	-webkit-animation: aniSnow3 10s linear 0s infinite;
+}
+@-webkit-keyframes aniSnow4{
+	0% {-webkit-transform: translate(153px,-61px) scale(0.9,0.9) }
+	100% {-webkit-transform: translate(162px,537px) }
+}
+.ani-layer-snow i:nth-child(4) { 
+	opacity: 0.6;
+	z-index: 2;
+	-webkit-animation: aniSnow4 10s linear 2s infinite;
+}
+@-webkit-keyframes aniSnow5{
+	0% {-webkit-transform: translate(231px,-44px) scale(1,1) }
+	100% {-webkit-transform: translate(308px,571px) }
+}
+.ani-layer-snow i:nth-child(5) { 
+	opacity: 0.8;
+	z-index: 2;
+	-webkit-animation: aniSnow5 10s linear 4s infinite;
+}
+@-webkit-keyframes aniSnow6{
+	0% {-webkit-transform: translate(151px,-36px) scale(0.2,0.2) }
+	100% {-webkit-transform: translate(238px,511px) }
+}
+.ani-layer-snow i:nth-child(6) { 
+	opacity: 0.6;
+	z-index: 1;
+	-webkit-animation: aniSnow6 10s linear 10s infinite;
+}
