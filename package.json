@@ -1,0 +1,38 @@
+{
+  "name": "HTML5Cases",
+  "version": "1.0.0",
+  "title":"Cases - TGIdeas",
+  "keywords": "Html5,Html5 Cases,Html5 Application, Html5 Websites, Html5 Site",
+  "description": "A cool collection of HTML5 Websites.",
+  "repository": "git://github.com/tgideas/case.git",
+  "homepage": "http://tgideas.github.io/case",
+  "author": {
+    "name": "TGIdeas",
+    "site": "http://tgideas.qq.com"
+  },
+  "license": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-concat-css": "*",
+    "grunt-css": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-concurrent": "*",
+    "grunt-contrib-copy": "*",
+    "load-grunt-config": "*",
+    "grunt-newer": "*",
+    "grunt-contrib-less": "~0.11.0",
+    "grunt-replace":"*",
+    "grunt-i18n-static":"*",
+    "grunt-jsbeautifier":"*"
+  },
+  "dependencies": {
+    "time-grunt": "*"
+  }
+}
