@@ -27,7 +27,7 @@
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="cases">Cases <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="cases">
-                <li><a href="../webank/">Webank</a></li>
+                <li class="active"><a href="../webank/">Webank</a></li>
                 <li class="divider"></li>
               </ul>
             </li>
@@ -53,22 +53,19 @@
         <div class="bs-docs-section">
             <div class="row">
                 <div class="col-lg-12 yue du">
-                    <h2>评分</h2>
-                    <p id="chart" class="chart">
-                    
+                    <p>
+                    <a href="http://www.webank.com/mobile/index.html" target="_blank"><img src="img/cover.png" alt="cover" /></a>
                     </p>
                     <h2>概述</h2>
                     <p>
                     webank的这个宣传页面上线后在朋友圈广为传播，页面切换方式新颖的地方在于它完美地结合了水平方向滑屏、垂直方向滑屏两种交互方式。另外动画效果细腻且主次分明，足见制作同学的用心良苦。候选2014年度10佳HTML5应用之一。
                     </p>
-                    <h2>封面</h2>
-                    <p>
-                    <a href="http://www.webank.com/mobile/index.html" target="_blank"><img src="img/cover.png" alt="cover" /></a>
-                    </p>
+                    <h2>评分</h2>
+                    <p id="chart" class="chart"></p>
                     <h2>二维码</h2>
                     <p><img src="img/qrcode.png" alt="qrcode" /></p>
                     <h2>分析</h2>
-                    <h3>特色动效及Demo</h3>
+                    <h3>特色动效</h3>
                     <table>
                         <thead>
                             <tr>
@@ -78,13 +75,36 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>xxx</td>
-                                <td>yyyy</td>
+                                <td>旋转背景</td>
+                                <td>水平滑屏时页面背景图旋转切换</td>
                             </tr>
+                            <tr>
+                                <td>逼真的机车前行</td>
+                                <td>第4屏的动画是整个应用的亮点，机车的抖动，尾气的点缀，背景树的旋转，较为逼真模拟了机车前行的场景。</td>
+                            </tr>
+
+                            <tr>
+                                <td>活的企鹅</td>
+                                <td>第5屏椅子上的小企鹅，配以精致的眨眼动画。</td>
+                            </tr>
+                            <tr>
+                                <td>雪球的飘逸轨迹</td>
+                                <td>第6屏扔雪球动画中，雪球的飞行轨迹细致飘逸。</td>
+                            </tr>
+                            <tr>
+                                <td>水平、垂直方向滑屏的结合</td>
+                                <td>前7屏为水平翻页交互，后4屏变为垂直翻页，衔接和指示得当，让人觉得新颖而不突兀。</td>
+                            </tr>
+
                         </tbody>
                     </table>
                     <h3>改进建议</h3>
-                    <p>改进建议改进建议，改进建议改进建议</p>
+                    <p>
+                        <ol>
+                            <li>配以场景音乐进一步渲染氛围</li>
+                            <li>为了防止在微信里面误按左上角返回关闭整个页面，翻页时可利用history api处理下url，支持浏览器的前进、后退机制。</li>
+                        </ol>
+                    </p>
                 </div>
             </div>
         </div>
@@ -92,8 +112,8 @@
     </div>
 
     <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../assets/js/d3.v3.min.js"></script>
-    <script src="../../assets/js/d3.tip.v0.6.6.js"></script>
     <script src="../../assets/js/case.score.js"></script>
     
     <script>
@@ -123,7 +143,7 @@
                 "score":98,
                 "weight":1,
                 "color":"#9E0041",
-                "label":"前端动画效果"
+                "label":"前端动画"
             },
             {
                 "id":"VD",
@@ -131,7 +151,7 @@
                 "score":"80",
                 "weight":.5,
                 "color":"#5E4EA1",
-                "label":"视觉设计效果"
+                "label":"视觉设计"
             },
             {
                 "id":"ID",
@@ -139,7 +159,7 @@
                 "score":"90",
                 "weight":.8,
                 "color":"#C7E89E",
-                "label":"交互体验效果"
+                "label":"交互体验"
             },
             {
                 "id":"CRE",

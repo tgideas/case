@@ -14,7 +14,7 @@ body>.navbar-transparent {
 body>.navbar-transparent .navbar-nav>.open>a {
     background-color:transparent!important
 }
-
+img {max-width:100%;}
 #home {
     padding-top:0
 }
@@ -206,7 +206,29 @@ footer p {
 }
 }
 
-
+/**
+ * home
+ */
+.home-caselist{
+    padding-bottom:80px;
+}
+.home-caselist .col-xs-6{
+    margin-bottom:30px;
+}
+.home-caseitem {
+    transition:all .2s ease-out;
+    -webkit-transition:all .2s ease-out;
+    display:block;
+}
+.home-caseitem:hover,.home-caseitem:focus{
+    box-shadow:0 2px 5px rgba(0,0,0,.35);
+    -webkit-box-shadow:0 2px 5px rgba(0,0,0,.35);
+    transform:translateY(-10px);
+    -webkit-transform:translateY(-10px);
+}
+/**
+ * detail.html
+ */
 .chart {
   font: 10px sans-serif;
   min-width:290px;
@@ -241,36 +263,26 @@ footer p {
 
 .aster-score { 
   line-height: 1;
-  font-weight: bold;
-  font-size: 500%;
+  font-size: 450%;
 }
 
-.d3-tip {
-  line-height: 1;
-  font-weight: bold;
-  padding: 12px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  border-radius: 2px;
-}
 
-/* Creates a small triangle extender for the tooltip */
-.d3-tip:after {
-  box-sizing: border-box;
-  display: inline;
-  font-size: 10px;
-  width: 100%;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.8);
-  content: "\25BC";
-  position: absolute;
-  text-align: center;
+.chart .legend {
+    margin:0;
+    padding:5px;
+    border:1px solid #ddd;
+    list-style:none;
+    float:right;
+    width:90px;
+    display:inline;
 }
+.legend-dot{width:6px;height:6px;margin-right:3px;margin-top:3px;}
+.active .legend-dot{border-radius:50%;}
+.active .legend-txt{font-weight:bold;color:orangered;}
 
-/* Style northward tooltips differently */
-.d3-tip.n:after {
-  margin: -1px 0 0 0;
-  top: 100%;
-  left: 0;
+@media (max-width:767px){
+    .page-header h1{font-size:2em;}
 }
-
+@media (max-width:479px){
+    .page-header h1{font-size:1.5em;}
+}

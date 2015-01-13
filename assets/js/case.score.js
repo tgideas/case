@@ -1,11 +1,37 @@
 (function($,Case){
 
+    var legend = function(data){
+        this.data = data;
+        this.init();
+    };
+    legend.prototype = {
+        init:function(){
+            var html = [];
+            html.push('<ul class="legend">');
+            this.data.forEach(function(r){
+                html.push('<li class="clearfix" id="legend'+r.id+'"><span class="legend-dot pull-left" style="background-color:'+r.color+'"></span><span class="legend-txt">'+r.label+':'+r.score+'</span></li>');
+            });
+            html.push('</ul>');
+
+            this.html = html.join('');
+        },
+        show:function(id){
+            var $r = $('#legend'+id);
+            $r.parent().find('li').removeClass('active');
+            $r.addClass('active');
+        },
+        hide:function(id){
+            $('#legend'+id).removeClass('active');
+        }
+    };
+
     var draw = function(opts){
         var me = this;
         this.opts = $.extend({
             targetSelector:'body',
             redrawOnResize:true,
-            resizeSenser:200
+            resizeSenser:200,
+            pathStroke:'#ddd'
         },opts||{});
 
         this.$target = $(this.opts.targetSelector);
@@ -20,6 +46,22 @@
             });
         };
 
+        this.data = this.opts.data || [];
+
+        this.data.forEach(function(d) {
+            d.id     =  d.id;
+            d.order  = +d.order;
+            d.color  =  d.color;
+            d.weight = +d.weight;
+            d.score  = +d.score;
+            d.width  = +d.weight;
+            d.label  =  d.label;
+        });
+ 
+        this.legend = new legend(this.data);
+
+        this.$target.append(this.legend.html);
+
         this.init();
 
     };
@@ -33,13 +75,6 @@
         this.pie = d3.layout.pie()
             .sort(null)
             .value(function(d) { return d.width; });
-
-        this.tip = d3.tip()
-          .attr('class', 'd3-tip')
-          .offset([0, 0])
-          .html(function(d) {
-            return d.data.label + ": <span style='color:orangered'>" + d.data.score + "</span>";
-          });
 
         this.arc = d3.svg.arc()
           .innerRadius(this.innerRadius)
@@ -57,35 +92,22 @@
             .append("g")
             .attr("transform", "translate(" + this.width / 2 + "," + this.height / 2 + ")");
 
-        this.svg.call(this.tip);
-
-        this.data = this.opts.data || [];
-
-        this.data.forEach(function(d) {
-            d.id     =  d.id;
-            d.order  = +d.order;
-            d.color  =  d.color;
-            d.weight = +d.weight;
-            d.score  = +d.score;
-            d.width  = +d.weight;
-            d.label  =  d.label;
-        });
-      
         this.path = this.svg.selectAll(".solidArc")
             .data(this.pie(this.data))
             .enter().append("path")
             .attr("fill", function(d) { return d.data.color; })
             .attr("class", "solidArc")
-            .attr("stroke", "gray")
+            .attr("stroke", this.opts.pathStroke)
+            .attr("data-id",function(d) { return d.data.id;})
             .attr("d", this.arc)
-            .on('mouseover', this.tip.show)
-            .on('mouseout', this.tip.hide);
+            .on('mouseover', function(e){me.legend.show(this.getAttribute('data-id'));})
+            .on('mouseout', function(e){me.legend.hide(this.getAttribute('data-id'));});
 
         this.outerPath = this.svg.selectAll(".outlineArc")
             .data(this.pie(this.data))
             .enter().append("path")
             .attr("fill", "none")
-            .attr("stroke", "gray")
+            .attr("stroke", this.opts.pathStroke)
             .attr("class", "outlineArc")
             .attr("d", this.outlineArc);  
 
